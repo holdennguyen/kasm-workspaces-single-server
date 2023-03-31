@@ -107,12 +107,22 @@ terraform init
 terraform apply --auto-approve
 ```
 
-After completion, your output will be similar:
+Your output will be similar:
 ![output](/docs/images/output.png)
 
 `public_ip` will be your public IP address of the Linode cloud server.
 
-We will need to SSH remotely to this server to reset the Kasm Workspace password. Run this command:
+After Terraform is completed, wait 10-15 minutes for `Kasm Workspaces` installation finished.
+
+## 📺 Kasm Workspaces
+Open your browser, enter `https://[YOUR LINODE PUBLIC IP]`
+![kasm workspaces1](/docs/images/kasm-workspaces.png)
+
+Click `Advanced` and `Proceed to [YOUR LINODE PUBLIC IP] (unsafe)` (Don't worry, this is your own cloud server). Login with `admin@kasm.local`:`password`
+![kasm workspaces login](/docs/images/kasm-workspaces-login.png)
+
+We will need to SSH remotely to this server to reset the Kasm Workspace password. 
+Run this command:
 
 ```
 ssh root@[YOUR LINODE PUBLIC IP]
@@ -137,16 +147,9 @@ sudo docker exec -i kasm_db psql -U kasmapp -d kasm <<EOF
 EOF
 ```
 
-After runing, it will output `UPDATE 1` which means you success to reset the password of Kasm Workspaces. Your admin account will be `admin@kasm.local`: `password`
+After runing, it will output `UPDATE 1` which means you success to reset the password of Kasm Workspaces. Your admin account will be `admin@kasm.local`: `password`.
 
 >If you install manual Kasm Workspaces instead of using Terraform, your random password will be output on the terminal so you don't need to do this reset task.
-
-## 📺 Kasm Workspaces
-Open your browser, enter `https://[YOUR LINODE PUBLIC IP]`
-![kasm workspaces1](/docs/images/kasm-workspaces.png)
-
-Click `Advanced` and `Proceed to [YOUR LINODE PUBLIC IP] (unsafe)` (Don't worry, this is your own cloud server). Login with `admin@kasm.local`:`password`
-![kasm workspaces login](/docs/images/kasm-workspaces-login.png)
 
 Now your `Kasm Workspaces` is ready:
 ![kasm workspaces ready](/docs/images/kasm-workspaces-ready.png)
