@@ -34,9 +34,7 @@ I use this solution to `keep my identity private` and my workstation `safe from 
 **The Container Streaming Platform®**
 Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
 
-<video width="100%" controls>
-  <source src="https://kasmweb.com/assets/videos/Cloud_Personal_Walkthrough.mp4" type="video/mp4">
-</video>
+![workspace](/docs/images/workspace.gif)
 
 - [What is Kasm Workspaces](https://kasmweb.com/)
 - [Kasm Cloud Personal](https://kasmweb.com/cloud-personal)
