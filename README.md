@@ -155,6 +155,11 @@ Now your `Kasm Workspaces` is ready:
 Select the tab `WORKSPACES` on the top bar to start using.
 ![workspaces](/docs/images/workspaces.png)
 
+You can run container (workspace) from your own image by choose `Add Manually` and setup, or choose `Add from Registry` to run container from Kasm's images in DockerHub: 
+![kasm registry](/docs/images/kasm-registry.png)
+
+After installing your workspace (example: Tor), return to `WORKSPACES` Tab on the top bar to use:
+![tor](/docs/images/tor.png)
 
 ## ☢️ Destroy Kasm Workspaces
 In your terraform working directory, run this command:
